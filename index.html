@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Madumitha S | Futuristic Portfolio</title>
+  <title>Madumitha S | Portfolio</title>
 
   <meta
     name="description"
-    content="Madumitha S – Aspiring Software Developer passionate about building futuristic web applications."
+    content="Madumitha S – Aspiring Software Developer Portfolio"
   />
 
   <!-- Google Fonts -->
@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap"
     rel="stylesheet"
   />
 
@@ -26,45 +26,84 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
 
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
+
 </head>
 
 <body>
 
-  <!-- PARTICLE BACKGROUND -->
+  <!-- CURSOR -->
+  <div class="cursor-bubble" id="cursorBubble"></div>
+  <div class="cursor-dot" id="cursorDot"></div>
+
+  <!-- PARTICLE CANVAS -->
   <canvas id="particleCanvas"></canvas>
 
-  <!-- CURSOR -->
-  <div class="cursor-dot" id="cursorDot"></div>
-  <div class="cursor-outline" id="cursorOutline"></div>
-
   <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="container nav-container">
+  <nav class="navbar" id="navbar">
 
-      <a href="#home" class="logo">
-        &lt;Madumitha<span>/</span>&gt;
+    <div class="nav-container">
+
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>
+        Madumitha
+        <span class="logo-bracket">/&gt;</span>
       </a>
 
       <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
-        <li><a href="#achievements" class="nav-link">Achievements</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+
+        <li>
+          <a href="#home" class="nav-link active">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="#about" class="nav-link">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a href="#skills" class="nav-link">
+            Skills
+          </a>
+        </li>
+
+        <li>
+          <a href="#projects" class="nav-link">
+            Projects
+          </a>
+        </li>
+
+        <li>
+          <a href="#achievements" class="nav-link">
+            Achievements
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact" class="nav-link">
+            Contact
+          </a>
+        </li>
+
       </ul>
 
-      <div class="hamburger" id="hamburger">
+      <button class="hamburger" id="hamburger">
+
         <span></span>
         <span></span>
         <span></span>
-      </div>
+
+      </button>
 
     </div>
+
   </nav>
 
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <section class="hero" id="home">
 
     <div class="hero-content">
@@ -72,39 +111,51 @@
       <!-- LEFT -->
       <div class="hero-text reveal">
 
-        <p class="hero-subtitle">
-          Hello World 👾
+        <p class="hero-greeting">
+          Hello, World! 👾
         </p>
 
-        <h1 class="hero-title">
-          Madumitha <span>S</span>
+        <h1 class="hero-name">
+          Madumitha
+          <span class="highlight">S</span>
         </h1>
 
-        <div class="typing-wrapper">
-          <span>I am a </span>
-          <span class="typing" id="typing"></span>
+        <div class="typewriter-wrapper">
+
+          <span class="typewriter-prefix">
+            I am a
+          </span>
+
+          <span class="typewriter" id="typewriter"></span>
+
         </div>
 
-        <p class="hero-description">
-          Aspiring Software Developer passionate about building futuristic,
-          responsive and interactive web applications.
+        <p class="hero-tagline">
+          Aspiring Software Developer passionate about building
+          futuristic and responsive web applications.
         </p>
 
+        <!-- BUTTONS -->
         <div class="hero-buttons">
 
           <a href="#projects" class="btn btn-primary">
+
             <i class="fas fa-rocket"></i>
             View Projects
+
           </a>
 
-          <a href="resume.pdf" download class="btn btn-outline">
-            <i class="fas fa-download"></i>
-            Resume
+          <a href="#contact" class="btn btn-outline">
+
+            <i class="fas fa-paper-plane"></i>
+            Contact Me
+
           </a>
 
         </div>
 
-        <div class="social-icons">
+        <!-- SOCIALS -->
+        <div class="hero-socials">
 
           <a
             href="https://www.linkedin.com/"
@@ -129,35 +180,46 @@
       <!-- RIGHT -->
       <div class="hero-image reveal">
 
-        <div class="ring ring1"></div>
-        <div class="ring ring2"></div>
-        <div class="ring ring3"></div>
+        <div class="profile-ring">
 
-        <div class="profile-wrapper">
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+          <div class="ring ring-3"></div>
 
-          <img
-            src="profile.png"
-            alt="Madumitha"
-            class="profile-image"
-          />
+          <!-- PROFILE IMAGE -->
+          <div class="profile-photo-wrapper">
+
+            <img
+              src="images/profile.jpg"
+              alt="Madumitha S"
+              class="profile-photo"
+            />
+
+          </div>
 
         </div>
 
         <!-- FLOATING BADGES -->
 
-        <div class="floating-badge badge1">
+        <div class="floating-badge badge-1">
+
           <i class="fab fa-python"></i>
           Python
+
         </div>
 
-        <div class="floating-badge badge2">
+        <div class="floating-badge badge-2">
+
           <i class="fab fa-js"></i>
           JavaScript
+
         </div>
 
-        <div class="floating-badge badge3">
+        <div class="floating-badge badge-3">
+
           <i class="fas fa-code"></i>
           Full Stack
+
         </div>
 
       </div>
@@ -165,11 +227,16 @@
     </div>
 
     <!-- SCROLL DOWN -->
-    <div class="scroll-down">
-      <div class="mouse">
-        <div class="wheel"></div>
+    <div class="scroll-indicator">
+
+      <div class="scroll-mouse">
+
+        <div class="scroll-wheel"></div>
+
       </div>
+
       <span>Scroll Down</span>
+
     </div>
 
   </section>
@@ -181,10 +248,15 @@
 
       <div class="section-header reveal">
 
-        <p class="section-tag">// About Me</p>
+        <p class="section-tag">
+          // who am i
+        </p>
 
         <h2 class="section-title">
-          Who <span>I Am</span>
+
+          About
+          <span class="highlight">Me</span>
+
         </h2>
 
       </div>
@@ -192,41 +264,70 @@
       <div class="about-grid">
 
         <!-- CARD -->
-        <div class="glass card reveal">
+        <div class="about-card glass reveal">
 
-          <div class="card-icon">
+          <div class="about-icon">
             <i class="fas fa-user-astronaut"></i>
           </div>
 
-          <h3>About Me</h3>
+          <h3>Who I Am</h3>
 
           <p>
-            I'm Madumitha S, a passionate Information Science student who loves
-            crafting futuristic digital experiences using modern web
-            technologies.
+            I'm Madumitha S, a passionate tech enthusiast currently pursuing
+            Information Science Engineering.
           </p>
 
         </div>
 
         <!-- CARD -->
-        <div class="glass card reveal">
+        <div class="about-card glass reveal">
 
-          <div class="card-icon">
+          <div class="about-icon">
             <i class="fas fa-graduation-cap"></i>
           </div>
 
           <h3>Education</h3>
 
-          <div class="education">
+          <div class="edu-list">
 
             <div class="edu-item">
-              <span>2025 - 2028</span>
-              <p>B.E Information Science Engineering</p>
+
+              <span class="edu-year">
+                2025–2028
+              </span>
+
+              <div>
+
+                <strong>
+                  B.E Information Science Engineering
+                </strong>
+
+                <small>
+                  VVCE Mysuru
+                </small>
+
+              </div>
+
             </div>
 
             <div class="edu-item">
-              <span>2022 - 2025</span>
-              <p>Diploma in Computer Science</p>
+
+              <span class="edu-year">
+                2022–2025
+              </span>
+
+              <div>
+
+                <strong>
+                  Diploma in Computer Science
+                </strong>
+
+                <small>
+                  CGPA: 8.71
+                </small>
+
+              </div>
+
             </div>
 
           </div>
@@ -234,18 +335,31 @@
         </div>
 
         <!-- CARD -->
-        <div class="glass card reveal">
+        <div class="about-card glass reveal">
 
-          <div class="card-icon">
-            <i class="fas fa-location-dot"></i>
+          <div class="about-icon">
+            <i class="fas fa-map-marker-alt"></i>
           </div>
 
           <h3>Personal Info</h3>
 
           <ul class="info-list">
-            <li><i class="fas fa-map-pin"></i> Karnataka, India</li>
-            <li><i class="fas fa-briefcase"></i> Open To Work</li>
-            <li><i class="fas fa-heart"></i> Web Development</li>
+
+            <li>
+              <i class="fas fa-map-pin"></i>
+              Karnataka, India
+            </li>
+
+            <li>
+              <i class="fas fa-briefcase"></i>
+              Open To Work
+            </li>
+
+            <li>
+              <i class="fas fa-heart"></i>
+              Full Stack Developer
+            </li>
+
           </ul>
 
         </div>
@@ -257,16 +371,21 @@
   </section>
 
   <!-- SKILLS -->
-  <section class="section dark-section" id="skills">
+  <section class="section section-alt" id="skills">
 
     <div class="container">
 
       <div class="section-header reveal">
 
-        <p class="section-tag">// My Skills</p>
+        <p class="section-tag">
+          // what i know
+        </p>
 
         <h2 class="section-title">
-          Tech <span>Stack</span>
+
+          My
+          <span class="highlight">Skills</span>
+
         </h2>
 
       </div>
@@ -274,57 +393,73 @@
       <div class="skills-grid">
 
         <!-- SKILL -->
-        <div class="glass skill-card reveal">
+        <div class="skill-category glass reveal">
 
           <h3>
-            <i class="fab fa-html5"></i>
-            HTML
-          </h3>
 
-          <div class="skill-bar">
-            <div class="skill-fill html"></div>
-          </div>
-
-        </div>
-
-        <!-- SKILL -->
-        <div class="glass skill-card reveal">
-
-          <h3>
-            <i class="fab fa-css3-alt"></i>
-            CSS
-          </h3>
-
-          <div class="skill-bar">
-            <div class="skill-fill css"></div>
-          </div>
-
-        </div>
-
-        <!-- SKILL -->
-        <div class="glass skill-card reveal">
-
-          <h3>
-            <i class="fab fa-js"></i>
-            JavaScript
-          </h3>
-
-          <div class="skill-bar">
-            <div class="skill-fill js"></div>
-          </div>
-
-        </div>
-
-        <!-- SKILL -->
-        <div class="glass skill-card reveal">
-
-          <h3>
             <i class="fab fa-python"></i>
             Python
+
           </h3>
 
           <div class="skill-bar">
-            <div class="skill-fill python"></div>
+
+            <div class="skill-fill" style="width:80%"></div>
+
+          </div>
+
+        </div>
+
+        <!-- SKILL -->
+        <div class="skill-category glass reveal">
+
+          <h3>
+
+            <i class="fab fa-html5"></i>
+            HTML
+
+          </h3>
+
+          <div class="skill-bar">
+
+            <div class="skill-fill" style="width:90%"></div>
+
+          </div>
+
+        </div>
+
+        <!-- SKILL -->
+        <div class="skill-category glass reveal">
+
+          <h3>
+
+            <i class="fab fa-css3-alt"></i>
+            CSS
+
+          </h3>
+
+          <div class="skill-bar">
+
+            <div class="skill-fill" style="width:85%"></div>
+
+          </div>
+
+        </div>
+
+        <!-- SKILL -->
+        <div class="skill-category glass reveal">
+
+          <h3>
+
+            <i class="fab fa-js"></i>
+            JavaScript
+
+          </h3>
+
+          <div class="skill-bar">
+
+            <div class="skill-fill" style="width:75%"></div>
+
           </div>
 
         </div>
@@ -342,10 +477,15 @@
 
       <div class="section-header reveal">
 
-        <p class="section-tag">// My Projects</p>
+        <p class="section-tag">
+          // projects
+        </p>
 
         <h2 class="section-title">
-          Featured <span>Projects</span>
+
+          My
+          <span class="highlight">Projects</span>
+
         </h2>
 
       </div>
@@ -353,93 +493,33 @@
       <div class="projects-grid">
 
         <!-- PROJECT -->
-        <div class="glass project-card reveal">
+        <div class="project-card glass reveal">
 
-          <img
-            src="project1.png"
-            class="project-image"
-            alt="Project"
-          />
+          <div class="project-header">
 
-          <div class="project-content">
+            <div class="project-icon">
 
-            <h3>Claraglo Skincare Website</h3>
-
-            <p>
-              A modern skincare brand website with responsive design and
-              interactive user experience.
-            </p>
-
-            <div class="project-tech">
-
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-
-            </div>
-
-            <div class="project-buttons">
-
-              <a href="#" class="btn-small">
-                <i class="fab fa-github"></i>
-                Code
-              </a>
-
-              <a href="#" class="btn-small">
-                <i class="fas fa-globe"></i>
-                Live
-              </a>
+              <i class="fas fa-spa"></i>
 
             </div>
 
           </div>
 
-        </div>
+          <h3 class="project-title">
+            Claraglo Skincare Website
+          </h3>
 
-      </div>
-
-    </div>
-
-  </section>
-
-  <!-- ACHIEVEMENTS -->
-  <section class="section dark-section" id="achievements">
-
-    <div class="container">
-
-      <div class="section-header reveal">
-
-        <p class="section-tag">// Achievements</p>
-
-        <h2 class="section-title">
-          My <span>Achievements</span>
-        </h2>
-
-      </div>
-
-      <div class="achievement-grid">
-
-        <div class="glass achievement-card reveal">
-
-          <i class="fas fa-certificate"></i>
-
-          <h3>Web & Python Internship</h3>
-
-          <p>
-            Completed 5 months internship in Web Development and Python.
+          <p class="project-desc">
+            Responsive skincare website with modern UI and futuristic design.
           </p>
 
-        </div>
+          <div class="project-tech">
 
-        <div class="glass achievement-card reveal">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
 
-          <i class="fas fa-star"></i>
-
-          <h3>Academic Excellence</h3>
-
-          <p>
-            Achieved 8.71 CGPA in Diploma Computer Science Engineering.
-          </p>
+          </div>
 
         </div>
 
@@ -456,57 +536,58 @@
 
       <div class="section-header reveal">
 
-        <p class="section-tag">// Contact</p>
+        <p class="section-tag">
+          // contact me
+        </p>
 
         <h2 class="section-title">
-          Get In <span>Touch</span>
+
+          Get In
+          <span class="highlight">Touch</span>
+
         </h2>
 
       </div>
 
       <div class="contact-wrapper">
 
-        <!-- INFO -->
-        <div class="glass contact-info reveal">
+        <!-- LEFT -->
+        <div class="contact-info reveal">
 
           <h3>Let's Connect 🚀</h3>
 
           <p>
-            Open for internships, collaborations and exciting opportunities.
+            Feel free to contact me for internships,
+            projects or collaborations.
           </p>
-
-          <div class="contact-item">
-            <i class="fab fa-linkedin"></i>
-            LinkedIn
-          </div>
-
-          <div class="contact-item">
-            <i class="fab fa-github"></i>
-            GitHub
-          </div>
-
-          <div class="contact-item">
-            <i class="fas fa-location-dot"></i>
-            Karnataka, India
-          </div>
 
         </div>
 
         <!-- FORM -->
-        <form class="glass contact-form reveal">
+        <form class="contact-form glass reveal">
 
-          <input type="text" placeholder="Your Name" required />
+          <input
+            type="text"
+            placeholder="Your Name"
+            required
+          />
 
-          <input type="email" placeholder="Your Email" required />
+          <input
+            type="email"
+            placeholder="Your Email"
+            required
+          />
 
           <textarea
-            rows="6"
+            rows="5"
             placeholder="Your Message"
           ></textarea>
 
-          <button class="btn btn-primary">
+          <button type="submit" class="btn btn-primary">
+
             <i class="fas fa-paper-plane"></i>
             Send Message
+
           </button>
 
         </form>
@@ -520,28 +601,40 @@
   <!-- FOOTER -->
   <footer class="footer">
 
-    <div class="container footer-container">
+    <div class="footer-inner">
 
-      <h3>&lt;Madumitha/&gt;</h3>
+      <p class="footer-logo">
 
-      <p>
+        <span class="logo-bracket">&lt;</span>
+
+        Madumitha S
+
+        <span class="logo-bracket">/&gt;</span>
+
+      </p>
+
+      <p class="footer-text">
+
         Designed & Built with ❤️ by Madumitha S
+
       </p>
 
       <div class="footer-socials">
 
-        <a href="#">
+        <a href="#" class="social-icon">
           <i class="fab fa-linkedin-in"></i>
         </a>
 
-        <a href="#">
+        <a href="#" class="social-icon">
           <i class="fab fa-github"></i>
         </a>
 
       </div>
 
-      <p class="copyright">
-        © 2026 Madumitha S. All Rights Reserved.
+      <p class="footer-copy">
+
+        © 2026 Madumitha S. All rights reserved.
+
       </p>
 
     </div>
@@ -549,10 +642,13 @@
   </footer>
 
   <!-- BACK TO TOP -->
-  <button class="back-top" id="backTop">
+  <button class="back-to-top" id="backToTop">
+
     <i class="fas fa-chevron-up"></i>
+
   </button>
 
+  <!-- JS -->
   <script src="script.js"></script>
 
 </body>
